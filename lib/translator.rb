@@ -18,18 +18,18 @@ end
 
 def get_japanese_emoticon(path, emoticon)
   hash = load_library(path)
-  result = hash["get_emoticon"][emoticon]
-  if result == nil
-    result = "Sorry, that emoticon was not found" 
+  translation = hash["get_emoticon"][emoticon]
+  if translation == nil
+    translation = "Sorry, that emoticon was not found" 
   end
-  result
+  translation
 end
 
 def get_english_meaning(path, emoticon)
-  emoticon_hash = load_library(path)
-  result = emoticon_hash["get_meaning"][emoticon]
-  if result == nil
-    result = "Sorry, that emoticon was not found" 
+  hash = load_library(path)
+  translation = hash["get_meaning"][emoticon]
+  if translation == nil
+    translation = "Sorry, that emoticon was not found" 
   end
-  result
+  translation
 end
